@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import BallP from './components/BallP.vue';
 // 引入elementUi
 import ElementUI from 'element-ui';
 // 引入elementUi css
