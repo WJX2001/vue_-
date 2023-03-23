@@ -25,7 +25,7 @@ export default {
   // 生命周期函数
   // 1.组件实例被创建之初
   beforeCreate() {
-    console.log("beforeCreate");
+    // console.log("beforeCreate");
   },
   // 2.组件实例已经完全创建
   created() {},
@@ -60,7 +60,7 @@ export default {
 
   methods: {
     handleEvent() {
-      console.log("hahaha");
+      // console.log("hahaha");
     },
     monitor() {
       // 传递给父级
@@ -100,7 +100,7 @@ export default {
     },
     info: {
             handler: function (newValue, oldValue) {
-                console.log('info', newValue, oldValue)
+                // console.log('info', newValue, oldValue)
                 this.localInfo = newValue
             },
             immediate: true
