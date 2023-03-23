@@ -2,7 +2,7 @@
 <template>
     <div>
         <!-- <ball-c :ball="inner" @play-ball="getChild"></ball-c> -->
-        <ball-c :ball="referenceData" :val="val" @val="changeVal"></ball-c>
+        <ball-c :ball="referenceData" :val="val" @val="getfromGrandson" :way="getfromGrandson"></ball-c>
         <ball-t :data-object="dataObj" :data-method="addParentDatearr" @data="updateData"></ball-t>
         {{ JSON.stringify(dataObj.array) }}
    </div>
@@ -35,7 +35,7 @@ export default {
         }
     },
     methods: {
-        changeVal(val) {
+        getfromGrandson(val) {
             // console.log('此数据来自c1组件',val)
             this.val = val
         },

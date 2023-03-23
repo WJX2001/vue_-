@@ -5,10 +5,12 @@
 <script>
     export default {
         name: 'BallC1',
-        props:['val'],
+        props:['val','way'],
         methods: {
             send() {
-                this.$emit('val',this.val - 1)
+                // this.$emit('val',this.val - 1)
+                // 通过函数方法进行透传
+                this.way(this.val-1)
             }
         }
     }

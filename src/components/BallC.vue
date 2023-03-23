@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <BallC1 :val="val" @val="send"></BallC1>
+        <BallC1 :val="val" @val="send" :way="way"></BallC1>
         
     </div>
     
@@ -14,7 +14,7 @@ export default {
     components: {
         BallC1
     },
-    props:['ball','val'],
+    props:['ball','val','way'],
 
     methods: {
         send(val) {
