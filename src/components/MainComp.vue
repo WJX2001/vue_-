@@ -4,7 +4,7 @@
             <div slot="header">
                 <el-button @click="fresh">控制子组件</el-button>
             </div>
-            <parent-control ref="child" :refresh = "refresh"></parent-control>
+            <parent-control ref="child" :refresh = "refresh" :user="user"></parent-control>
         </el-card>
     </div>
 </template>
@@ -27,7 +27,8 @@ export default {
             refresh: false,
             msg:{
                 text: 'hahahah'
-            }
+            },
+            user: {}
             
         }
     },
@@ -52,6 +53,8 @@ export default {
             // 变更对象里的值
             this.msg.text = '我变了'
             
+            // 异步加载
+            this.$set(this.user,'info',{name:'大象'})
         }, 3000);
     }
     
