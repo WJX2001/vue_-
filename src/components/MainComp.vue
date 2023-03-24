@@ -16,9 +16,19 @@ export default {
   components: { ParentControl },
     name: 'MainComp',
     comments:[ParentControl],
+    provide: function() {
+        return {
+            text: this.msg
+        }
+    },
+    
     data: function(){
         return {
-            refresh: false
+            refresh: false,
+            msg:{
+                text: 'hahahah'
+            }
+            
         }
     },
     methods: {
@@ -37,6 +47,13 @@ export default {
             
         }
     },
+    mounted() {
+        setTimeout(() => {
+            // 变更对象里的值
+            this.msg.text = '我变了'
+            
+        }, 3000);
+    }
     
 }
 </script>
